@@ -4,7 +4,7 @@
 }
 
 .home-content {
-    margin: auto;
+    margin-left: 120px;
     padding: 10px;
     margin-top: 100px;
 }
@@ -61,5 +61,5 @@
 
 .get-resume-button a {
     text-decoration: none;
-    color: black;
+    color: white;
 }
