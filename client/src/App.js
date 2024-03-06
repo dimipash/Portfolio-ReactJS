@@ -14,11 +14,12 @@ const App = () => {
         <>
             <Sidebar />
             <About />
-            <TechStack />
-            <Project />
             <WorkExperience />
+            <TechStack />
             <Education />
+            <Project />
             <Contact />
+
             <ScrollToTop
                 smooth={true}
                 top="20"

@@ -1,9 +1,5 @@
-.row {
-    margin-top: 50px;
-}
-
 .contact-section {
-    height: 650px;
+    height: 600px;
     margin-bottom: 50px;
     box-shadow: 15px 9px 9px -2px rgba(230, 224, 224, 0.86);
     -webkit-box-shadow: 15px 9px 9px -2px rgba(230, 224, 224, 0.86);

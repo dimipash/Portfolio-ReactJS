@@ -30,7 +30,7 @@ const Education = () => {
     ];
     const colors = ["#001CCE", "#00C79F", "#FE2EF7"];
     return (
-        <div className="container education-section">
+        <div className="container education-section" id="education">
             <div className="section-title">
                 <h5>Education</h5>
                 <span className="line"></span>
