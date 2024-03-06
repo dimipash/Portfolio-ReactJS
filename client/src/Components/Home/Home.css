@@ -72,3 +72,10 @@
     text-decoration: none;
     color: white;
 }
+
+@media (max-width: 1000px) {
+    .container {
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+}

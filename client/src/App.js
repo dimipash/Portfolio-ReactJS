@@ -8,10 +8,12 @@ import Education from "./Components/Education/Education";
 import Contact from "./Components/Contact/Contact";
 import ScrollToTop from "react-scroll-to-top";
 import "./App.css";
+import NavbarMobileView from "./Components/Sidebar/NavbarMobileView";
 
 const App = () => {
     return (
         <>
+            <NavbarMobileView />
             <Sidebar />
             <About />
             <WorkExperience />
