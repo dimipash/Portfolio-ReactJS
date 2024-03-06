@@ -6,6 +6,8 @@ import Project from "./Components/Projects/Project";
 import WorkExperience from "./Components/WorkExperience/WorkExperience";
 import Education from "./Components/Education/Education";
 import Contact from "./Components/Contact/Contact";
+import ScrollToTop from "react-scroll-to-top";
+import "./App.css";
 
 const App = () => {
     return (
@@ -17,6 +19,14 @@ const App = () => {
             <WorkExperience />
             <Education />
             <Contact />
+            <ScrollToTop
+                smooth={true}
+                top="20"
+                color="white"
+                height="20"
+                width="20"
+                style={{ borderRadius: "90px", backgroundColor: "#38004c" }}
+            />
         </>
     );
 };
