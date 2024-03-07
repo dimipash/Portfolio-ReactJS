@@ -52,3 +52,9 @@
     margin-top: -30px;
     line-height: 50px;
 }
+
+@media (max-width: 1000px) {
+    .techstack-section {
+        margin-left: auto;
+    }
+}

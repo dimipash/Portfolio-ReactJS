@@ -13,6 +13,7 @@
     margin-top: 50px;
     border: 5px solid yellowgreen;
     margin-left: 140px;
+    object-fit: cover;
 }
 
 .about-details {
@@ -29,4 +30,10 @@
     height: 3px;
     margin: 1px auto;
     background-color: yellowgreen;
+}
+
+@media (max-width: 1000px) {
+    .about-section {
+        height: auto;
+    }
 }

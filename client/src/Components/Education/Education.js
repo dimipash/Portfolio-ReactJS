@@ -40,6 +40,7 @@ const Education = () => {
                 <VerticalTimeline lineColor="#FF1042">
                     {data.map((item, index) => (
                         <VerticalTimelineElement
+                            key={index}
                             className="vertical-timeline-element--work"
                             contentStyle={{
                                 background: colors[index],
