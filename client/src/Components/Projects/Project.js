@@ -69,7 +69,7 @@ const Project = () => {
             <div className="row">
                 {data.map((item, index) => (
                     <div
-                        className="col-xl-6 col-lg-6 col-md-6 col-sm-12"
+                        className="col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-2"
                         key={index}
                     >
                         <ProjectList {...item} />

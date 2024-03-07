@@ -11,8 +11,9 @@ import {
 import { MdBiotech } from "react-icons/md";
 import { MdCastForEducation } from "react-icons/md";
 import { Link } from "react-scroll";
+import Switch from "react-switch";
 
-const NavbarMobileView = () => {
+const NavbarMobileView = ({ theme, changeTheme }) => {
     const [open, setOpen] = useState(false);
 
     const handleClick = () => {
@@ -97,16 +98,12 @@ const NavbarMobileView = () => {
                                 <FcTodoList size={25} /> Projects
                             </Link>
                         </li>
+
                         <li className="nav-item-mobileview">
-                            <Link
-                                to="contact"
-                                spy={true}
-                                smooth={true}
-                                duration={100}
-                                offset={-100}
-                            >
-                                <FcContacts size={25} /> Contact
-                            </Link>
+                            <Switch
+                                onChange={changeTheme}
+                                checked={theme === "light"}
+                            />
                         </li>
                     </ul>
                 </div>

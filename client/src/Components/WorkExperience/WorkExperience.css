@@ -6,6 +6,10 @@
     color: black;
 }
 
+#dark .date-class {
+    color: white;
+}
+
 .timeline-section {
     margin-top: 20px;
 }
