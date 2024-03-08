@@ -10,6 +10,8 @@ const ProjectList = ({ name, des, projectlink, techused }) => {
         setShow(!show);
     };
 
+    const colors = ["#FF6347", "#FF1042", "#001CCE", "#4B088A"];
+
     return (
         <Zoom>
             <div
@@ -41,7 +43,13 @@ const ProjectList = ({ name, des, projectlink, techused }) => {
                                 key={index}
                             >
                                 <div className="tech-used-in-project">
-                                    <p>{tech.techname}</p>
+                                    <p
+                                        style={{
+                                            backgroundColor: colors[index],
+                                        }}
+                                    >
+                                        {tech.techname}
+                                    </p>
                                 </div>
                             </div>
                         ))}

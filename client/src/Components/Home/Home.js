@@ -23,7 +23,7 @@ const Home = ({ theme, changeTheme }) => {
 
             <div className="home-content">
                 <Fade right>
-                    <h1>Hello, I'm a </h1>
+                    <h1>Hello, I'm Dimitar Pashev</h1>
                     <h3>
                         <Typewriter
                             options={{
