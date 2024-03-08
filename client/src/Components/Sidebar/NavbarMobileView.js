@@ -98,6 +98,17 @@ const NavbarMobileView = ({ theme, changeTheme }) => {
                                 <FcTodoList size={25} /> Projects
                             </Link>
                         </li>
+                        <li className="nav-item-mobileview">
+                            <Link
+                                to="contact"
+                                spy={true}
+                                smooth={true}
+                                duration={100}
+                                offset={-100}
+                            >
+                                <FcContacts size={25} /> Contact
+                            </Link>
+                        </li>
 
                         <li className="nav-item-mobileview">
                             <Switch

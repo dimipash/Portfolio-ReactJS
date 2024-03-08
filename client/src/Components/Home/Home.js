@@ -4,6 +4,7 @@ import Typewriter from "typewriter-effect";
 import MyCv from "./cv.pdf";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { MdSunny } from "react-icons/md";
+import Fade from "react-reveal/Fade";
 
 const Home = ({ theme, changeTheme }) => {
     return (
@@ -21,31 +22,35 @@ const Home = ({ theme, changeTheme }) => {
             </div>
 
             <div className="home-content">
-                <h1>Hello, I'm a </h1>
-                <h3>
-                    <Typewriter
-                        options={{
-                            strings: [
-                                "Junior Python Developer",
-                                "ReactJS Developer",
-                                "Web Developer",
-                                "Backend Developer",
-                            ],
-                            autoStart: true,
-                            loop: true,
-                            delay: 5,
-                        }}
-                    />
-                </h3>
+                <Fade right>
+                    <h1>Hello, I'm a </h1>
+                    <h3>
+                        <Typewriter
+                            options={{
+                                strings: [
+                                    "Junior Python Developer",
+                                    "ReactJS Developer",
+                                    "Web Developer",
+                                    "Backend Developer",
+                                ],
+                                autoStart: true,
+                                loop: true,
+                                delay: 5,
+                            }}
+                        />
+                    </h3>
+                </Fade>
 
-                <div className="button-for-action">
-                    <div className="hire-me-button">Hire Me</div>
-                    <div className="get-resume-button">
-                        <a href={MyCv} download="Dimitar-Pashev-CV.pdf">
-                            Get resume
-                        </a>
+                <Fade bottom>
+                    <div className="button-for-action">
+                        <div className="hire-me-button">Hire Me</div>
+                        <div className="get-resume-button">
+                            <a href={MyCv} download="Dimitar-Pashev-CV.pdf">
+                                Get resume
+                            </a>
+                        </div>
                     </div>
-                </div>
+                </Fade>
             </div>
         </div>
     );

@@ -19,7 +19,7 @@ const SidebarList = ({ expandSidebar }) => {
             {expandSidebar ? (
                 <div className="navbar-items">
                     <div className="sidebar-profile-pic">
-                        <img src={profilepic} alt="profile picture" />
+                        <img src={profilepic} alt="profile" />
                     </div>
 
                     <ul>
