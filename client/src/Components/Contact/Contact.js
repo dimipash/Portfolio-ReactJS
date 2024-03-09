@@ -1,9 +1,49 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Contact.css";
 import { RiSendPlaneFill } from "react-icons/ri";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Fade from "react-reveal/Fade";
 
 const Contact = () => {
+    const API = "http://localhost:8080/sendemail";
+
+    const [name, setName] = useState();
+    const [email, setEmail] = useState();
+    const [jobtypes, setJobtypes] = useState();
+    const [message, setMessage] = useState();
+
+    const sendemailInfo = async () => {
+        fetch(API, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+            },
+            body: JSON.stringify({
+                name,
+                email,
+                jobtypes,
+                message,
+            }),
+        })
+            .then((res) => res.json())
+            .then((result) => {
+                if (result.error) {
+                    toast.error(result.error);
+                } else {
+                    toast.success("Your e-mail has been sent");
+                    setName("");
+                    setEmail("");
+                    setJobtypes("");
+                    setMessage("");
+                }
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+    };
+
     return (
         <div className="container contact-section" id="contact">
             <div className="row">
@@ -30,6 +70,10 @@ const Contact = () => {
                                     <input
                                         type="text"
                                         className="form-control"
+                                        value={name}
+                                        onChange={(e) =>
+                                            setName(e.target.value)
+                                        }
                                     />
                                 </div>
 
@@ -38,6 +82,10 @@ const Contact = () => {
                                     <input
                                         type="text"
                                         className="form-control"
+                                        value={email}
+                                        onChange={(e) =>
+                                            setEmail(e.target.value)
+                                        }
                                     />
                                 </div>
 
@@ -45,7 +93,16 @@ const Contact = () => {
                                     <label className="form-level">
                                         Job Types
                                     </label>
-                                    <select className="custom-select-tag">
+                                    <select
+                                        className="custom-select-tag"
+                                        value={jobtypes}
+                                        onChange={(e) =>
+                                            setJobtypes(e.target.value)
+                                        }
+                                    >
+                                        <option value="">
+                                            Select Job Type
+                                        </option>
                                         <option>Full-time</option>
                                         <option>Working Student</option>
                                         <option>Part-time</option>
@@ -61,10 +118,17 @@ const Contact = () => {
                                         rows="4"
                                         type="text"
                                         className="form-control"
+                                        value={message}
+                                        onChange={(e) =>
+                                            setMessage(e.target.value)
+                                        }
                                     />
                                 </div>
 
-                                <div className="button-submit">
+                                <div
+                                    className="button-submit"
+                                    onClick={sendemailInfo}
+                                >
                                     <p>
                                         Send <RiSendPlaneFill size={20} />
                                     </p>
@@ -74,6 +138,18 @@ const Contact = () => {
                     </div>
                 </Fade>
             </div>
+            <ToastContainer
+                position="top-right"
+                autoClose={3000}
+                hideProgressBar={true}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="colored"
+            />
         </div>
     );
 };
